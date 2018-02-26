@@ -17,9 +17,9 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument('-u','--url', action='store', dest='url', required=True,
 					help="This is the url to attack. Typically http://example.com/index.php/tools/required/conversations/view_ajax")
-parser.add_argument('-s','--start', action='store', dest='start_id',
+parser.add_argument('-s','--start', action='store', type=int, dest='start_id',
                     help='Where to start enumeration')
-parser.add_argument('-e','--end', action='store', dest='end_id',
+parser.add_argument('-e','--end', action='store', type=int, dest='end_id',
                     help='Where to end enumeration')
 parser.add_argument('-v','--verbose', action='store_true', dest='verbose',
                     help='This boolean flag will trigger all raw information to stdout')
